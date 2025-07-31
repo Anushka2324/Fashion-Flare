@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="bgslider.css" />
+  </head>
+  <body>
+    <section class="slider-container">
+      <div class="slider-images">
+    
+        <div class="slider-img">
+          <img src="./img/hgdress1.png" alt="2" />
+          <h1>wrap</h1>
+          <div class="details">
+            <h2>WRAP DRESSES</h2>
+            <p>Effortless chic</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/hgdress2.png" alt="3" />
+          <h1>Shift</h1>
+          <div class="details">
+            <h2>SHIFT DRESSES</h2>
+            <p>Timeless simplicity</p>
+          </div>
+        </div>
+        <div class="slider-img active">
+          <img src="./img/hgdress3.jpg" alt="4" />
+          <h1>bodycon</h1>
+          <div class="details">
+            <h2>BODYCON DRESSES</h2>
+            <p>Sleek silhouette</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/hgdress4.jpg" alt="5" />
+          <h1>bias</h1>
+          <div class="details">
+            <h2>BIAS DRESSES</h2>
+            <p>Graceful drape</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/hgdress5.jpg" alt="6" />
+          <h1>peplum</h1>
+          <div class="details">
+            <h2>PEPLUM DRESSES</h2>
+            <p>Flared elegance</p>
+          </div>
+        </div>
+       
+    </section>
+    <script src="bgslider.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".slider-img").on("click", function () {
+          $(".slider-img").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
+  </body>
+  </html>

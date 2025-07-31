@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="bgslider.css" />
+  </head>
+  <body>
+    <section class="slider-container">
+      <div class="slider-images">
+       
+        <div class="slider-img">
+          <img src="./img/applejeans1.jpg" alt="2" />
+          <h1>boyfrd</h1>
+          <div class="details">
+            <h2>BOYFRIEND JEANS</h2>
+            <p>Relaxed fit</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/applejeans2.jpg" alt="3" />
+          <h1>straight</h1>
+          <div class="details">
+            <h2>Straight Jeans</h2>
+            <p>Timeless classic</p>
+          </div>
+        </div>
+        <div class="slider-img active">
+          <img src="./img/applejeans3.jpg" alt="4" />
+          <h1>BOOTCUT</h1>
+          <div class="details">
+            <h2>BOOT CUT JEANS</h2>
+            <p>Classic flare</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/applejeans4.jpg" alt="5" />
+          <h1>flare</h1>
+          <div class="details">
+            <h2>FLARE JEANS</h2>
+            <p>Vintage flair</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/applejeans5.jpg" alt="6" />
+          <h1>Wideleg</h1>
+          <div class="details">
+            <h2>WIDE LEG JEANS</h2>
+            <p>Effortless flow</p>
+          </div>
+        </div>
+     
+    </section>
+    <script src="bgslider.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".slider-img").on("click", function () {
+          $(".slider-img").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
+

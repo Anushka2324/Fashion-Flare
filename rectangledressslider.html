@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="bgslider.css" />
+  </head>
+  <body>
+    <section class="slider-container">
+      <div class="slider-images">
+       
+        <div class="slider-img">
+          <img src="./img/rectdress1.jpg" alt="2" />
+          <h1>shift</h1>
+          <div class="details">
+            <h2>SHIFT DRESSES</h2>
+            <p>Timeless simplicity</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/rectdress2.jpg" alt="3" />
+          <h1>EMPIRE</h1>
+          <div class="details">
+            <h2>EMPIRE DRESSES</h2>
+            <p>High-waisted gowns</p>
+          </div>
+        </div>
+        <div class="slider-img active">
+          <img src="./img/rectdress3.png" alt="4" />
+          <h1>seam</h1>
+          <div class="details">
+            <h2>SEAM DRESSES</h2>
+            <p>Sleek silhouette</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/rectdress4.png" alt="5" />
+          <h1>Wide</h1>
+          <div class="details">
+            <h2>WIDE PANTS</h2>
+            <p>Effortless chic</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/rectdress5.png" alt="6" />
+          <h1>XLINE</h1>
+          <div class="details">
+            <h2>X-LINE DRESSES</h2>
+            <p>Elegant flair</p>
+          </div>
+        </div>
+      
+    </section>
+    <script src="bgslider.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".slider-img").on("click", function () {
+          $(".slider-img").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
+  </body>
+  </html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Type Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+            background-image: url('./img/calimg.jpg');
+            background-size: 100%;
+           
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding-right: 50px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 10px;
+            margin-left: 20px;
+            
+        }
+        .result-button {
+            /*display: inline-block;
+            padding: 10px 20px;
+            background-color:#d33b66;
+            color: white;
+            border:#333;
+            border-radius: 9px;
+            text-decoration: none;
+            
+            cursor: pointer;
+            font-size: 20px;*/
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        
+        /*.result-button:hover {
+            background-color: #d33b66;
+        }*/
+    </style>
+</head>
+<body>
+    <h1 style="font-family:cursive">Body Type Calculator</h1>
+    <form id="bodyTypeForm">
+        <input type="number" id="bust" placeholder="Enter bust measurement (inch)" required>
+        <input type="number" id="waist" placeholder="Enter waist measurement (inch)" required>
+        <input type="number" id="hip" placeholder="Enter hip measurement (inch)" required>
+        <button type="button" onclick="calculateBodyType()">Generate</button>
+        <button id="result">Body shape</button>
+        
+    </form>
+
+
+    <script>
+        function calculateBodyType() {
+            const bust = parseFloat(document.getElementById('bust').value);
+            const waist = parseFloat(document.getElementById('waist').value);
+            const hip = parseFloat(document.getElementById('hip').value);
+            const resultDiv = document.getElementById('result');
+
+            if (!bust || !waist || !hip || bust <= 0 || waist <= 0 || hip <= 0) {
+                resultDiv.innerHTML = "<p style='color: red;'>Please enter valid measurements!</p>";
+                return;
+            }
+
+            let bodyType = "";
+            let redirectUrl = "#";
+
+            if (bust === waist && waist === hip) {
+                bodyType = "Rectangle";
+                redirectUrl = "rectangle.html";
+            } else if (Math.abs(bust - hip) <= 2 && waist < bust && waist < hip) {
+                bodyType = "Hourglass";
+                redirectUrl = "hourglass.html";
+            }else if (hip > bust && hip > waist) {
+                bodyType = "Pear";
+                redirectUrl = "pear.html";
+            } else if (bust > hip && bust > waist) {
+                bodyType = "Apple";
+                redirectUrl = "apple.html";
+            }  else {
+                bodyType = "Undefined Shape";
+                redirectUrl = "undefined.html";
+            }
+
+            resultDiv.innerHTML = `
+                <a href="${redirectUrl}" class="result-button"> ${bodyType}</a>
+            `;
+
+            
+            document.getElementById('bodyTypeForm').reset();
+        }
+    </script>
+</body>
+</html>

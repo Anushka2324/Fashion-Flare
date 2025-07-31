@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="bgslider.css" />
+  </head>
+  <body>
+    <section class="slider-container">
+      <div class="slider-images">
+       
+        <div class="slider-img">
+          <img src="./img/hgtop1.jpg" alt="2" />
+          <h1>OFF</h1>
+          <div class="details">
+            <h2>OFF SHOULDER TOPS</h2>
+            <p>Chic neckline</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/hgtop2.jpg" alt="3" />
+          <h1>heart</h1>
+          <div class="details">
+            <h2>SWEETHEART TOPS</h2>
+            <p>Romantic charm</p>
+          </div>
+        </div>
+        <div class="slider-img active">
+          <img src="./img/hgtop4.png" alt="4" />
+          <h1>sqoop</h1>
+          <div class="details">
+            <h2>SCOOP NECKLINE TOPS</h2>
+            <p>Classic simplicity</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/hgtop3.jpg" alt="5" />
+          <h1>square</h1>
+          <div class="details">
+            <h2>SQUARE NECKLINE TOPS</h2>
+            <p>Structured chic</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/hgtop5.png" alt="6" />
+          <h1>VLINE</h1>
+          <div class="details">
+            <h2>V NECKLINE TOPS</h2>
+            <p>Flattering elegance</p>
+          </div>
+        </div>
+      
+    </section>
+    <script src="bgslider.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".slider-img").on("click", function () {
+          $(".slider-img").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
+  </body>
+  </html>

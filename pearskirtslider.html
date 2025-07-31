@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="bgslider.css" />
+  </head>
+  <body>
+    <section class="slider-container">
+      <div class="slider-images">
+       
+        <div class="slider-img">
+          <img src="./img/pearskirt2.jpg" alt="2" />
+          <h1>Panelle</h1>
+          <div class="details">
+            <h2>Panelled</h2>
+            <p>Structured elegance</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/pearskirt3.jpg" alt="3" />
+          <h1>TULIP</h1>
+          <div class="details">
+            <h2>TULIP SKIRTS</h2>
+            <p>Floral elegance</p>
+          </div>
+        </div>
+        <div class="slider-img active">
+          <img src="./img/pearskirt1.jpg" alt="4" />
+          <h1>full</h1>
+          <div class="details">
+            <h2>FULL SKIRTS</h2>
+            <p>Classic volume</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/pearskirt4.jpg" alt="5" />
+          <h1>BIAS</h1>
+          <div class="details">
+            <h2>BIAS SKIRTS</h2>
+            <p>Fluid drape</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/pearskirt5.jpg" alt="6" />
+          <h1>ALINE</h1>
+          <div class="details">
+            <h2>A-LINE</h2>
+            <p>Timeless elegance</p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <script src="bgslider.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".slider-img").on("click", function () {
+          $(".slider-img").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
+  </body>
+  </html>

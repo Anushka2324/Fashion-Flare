@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="bgslider.css" />
+  </head>
+  <body>
+    <section class="slider-container">
+      <div class="slider-images">
+        
+        <div class="slider-img">
+          <img src="./img/peartop1.png" alt="2" />
+          <h1>CROP</h1>
+          <div class="details">
+            <h2>CROP TOPS</h2>
+            <p>Summer staple</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/peartop3.jpg" alt="3" />
+          <h1>wrap</h1>
+          <div class="details">
+            <h2>WRAP TOPS</h2>
+            <p>Effortless chic</p>
+          </div>
+        </div>
+        <div class="slider-img active">
+          <img src="./img/peartop2.jpg" alt="4" />
+          <h1>RUUFLE</h1>
+          <div class="details">
+            <h2>RUFFLE TOPS</h2>
+            <p>Playful elegance</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/peartop5.jpg" alt="5" />
+          <h1>pockets</h1>
+          <div class="details">
+            <h2>BUST POCKETS TOPS</h2>
+            <p>Functional detail</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/peartop4.jpg" alt="6" />
+          <h1>stripes</h1>
+          <div class="details">
+            <h2>STRIPED SHIRTS</h2>
+            <p>Timeless pattern</p>
+          </div>
+        </div>
+        
+    </section>
+    <script src="bgslider.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".slider-img").on("click", function () {
+          $(".slider-img").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
+  </body>
+  </html>
+  

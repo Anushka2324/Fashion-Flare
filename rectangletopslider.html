@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="bgslider.css" />
+  </head>
+  <body>
+    <section class="slider-container">
+      <div class="slider-images">
+       
+        <div class="slider-img">
+          <img src="./img/recttop3.jpg" alt="2" />
+          <h1>Shirts</h1>
+          <div class="details">
+            <h2>BUTTON DOWN SHIRTS</h2>
+            <p>Classic staple</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/recttop2.jpg" alt="3" />
+          <h1>BELTED</h1>
+          <div class="details">
+            <h2>BELTED TOPS</h2>
+            <p>Structured chic</p>
+          </div>
+        </div>
+        <div class="slider-img active">
+          <img src="./img/recttop1.jpg" alt="4" />
+          <h1>RUFFLE</h1>
+          <div class="details">
+            <h2>RUFFLE TOPS</h2>
+            <p>Playful elegance</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/recttop4.jpg" alt="5" />
+          <h1>WRAP</h1>
+          <div class="details">
+            <h2>WRAP TOPS</h2>
+            <p>Effortless chic</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/recttop5.jpg" alt="6" />
+          <h1>Bow</h1>
+          <div class="details">
+            <h2>NECK BOW TOPS</h2>
+            <p>Charming elegance</p>
+          </div>
+        </div>
+     
+    </section>
+    <script src="bgslider.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".slider-img").on("click", function () {
+          $(".slider-img").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
+

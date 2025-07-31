@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="bgslider.css" />
+  </head>
+  <body>
+    <section class="slider-container">
+      <div class="slider-images">
+        
+        <div class="slider-img">
+          <img src="./img/rectjeans1.jpg" alt="2" />
+          <h1>TURN UP</h1>
+          <div class="details">
+            <h2>TURN UP PANTS</h2>
+            <p>Rolled cuffs</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/rectjeans2.jpg" alt="3" />
+          <h1>CARGO</h1>
+          <div class="details">
+            <h2>CARGO PANTS</h2>
+            <p>Utility trousers</p>
+          </div>
+        </div>
+        <div class="slider-img active">
+          <img src="./img/rectjeans3.png" alt="4" />
+          <h1>BOOTCUT</h1>
+          <div class="details">
+            <h2>BOOTCUT JEANS</h2>
+            <p>Flared bottoms</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/rectjeans4.jpg" alt="5" />
+          <h1>Wide</h1>
+          <div class="details">
+            <h2>WIDE PANTS</h2>
+            <p>Effortless chic</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/rectjeans5.jpg" alt="6" />
+          <h1>HAREM</h1>
+          <div class="details">
+            <h2>HAREM PANTS</h2>
+            <p>Baggy bottoms</p>
+          </div>
+        </div>
+       
+    </section>
+    <script src="bgslider.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".slider-img").on("click", function () {
+          $(".slider-img").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
+  </body>
+  </html>

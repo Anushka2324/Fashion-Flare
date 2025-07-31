@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="bgslider.css" />
+  </head>
+  <body>
+    <section class="slider-container">
+      <div class="slider-images">
+      
+        <div class="slider-img">
+          <img src="./img/appleskirt1.jpg" alt="2" />
+          <h1>ALINE</h1>
+          <div class="details">
+            <h2>A-LINE SKIRTS</h2>
+            <p>Flattering silhouette</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/appleskirt2.jpg" alt="3" />
+          <h1>FLIP</h1>
+          <div class="details">
+            <h2>FLIP SKIRTS</h2>
+            <p>Dynamic movement</p>
+          </div>
+        </div>
+        <div class="slider-img active">
+          <img src="./img/appleskirt3.jpg" alt="4" />
+          <h1>UNEVEN</h1>
+          <div class="details">
+            <h2>UNEVEN DESIGN SKIRTS</h2>
+            <p>Modern edge</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/appleskirt4.jpg" alt="5" />
+          <h1>trumpet</h1>
+          <div class="details">
+            <h2>TRUMPET SKIRTS</h2>
+            <p>Flared elegance</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="./img/appleskirt5.jpg" alt="6" />
+          <h1>BIAS</h1>
+          <div class="details">
+            <h2>BIAS SKIRTS</h2>
+            <p>Graceful drape</p>
+          </div>
+        </div>
+    
+    </section>
+    <script src="bgslider.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".slider-img").on("click", function () {
+          $(".slider-img").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
+

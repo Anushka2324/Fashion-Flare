@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="bgslider.css" />
+</head>
+<body>
+    <section class="slider-container">
+        <div class="slider-images">
+           
+            <div class="slider-img">
+                <img src="./img/pearpant2.jpg" alt="2" />
+                <h1>flare</h1>
+                <div class="details">
+                    <h2>FLARE JEANS</h2>
+                    <p>Vintage flair</p>
+                </div>
+            </div>
+            <div class="slider-img">
+                <img src="./img/pearpant3.jpg" alt="3" />
+                <h1>Straight</h1>
+                <div class="details">
+                    <h2>STRAIGHT JEANS</h2>
+                    <p>Versatile classic</p>
+                </div>
+            </div>
+            <div class="slider-img active">
+                <img src="./img/pearpant1.jpg" alt="4" />
+                <h1>HIGH Rise</h1>
+                <div class="details">
+                    <h2>HIGH Rise</h2>
+                    <p>Elevated style</p>
+                </div>
+            </div>
+            <div class="slider-img">
+                <img src="./img/pearpant4.jpg" alt="5" />
+                <h1>WIDE</h1>
+                <div class="details">
+                    <h2>WIDE JEANS</h2>
+                    <p>Relaxed comfort</p>
+                </div>
+            </div>
+            <div class="slider-img">
+                <img src="./img/pearpant5.jpg" alt="6" />
+                <h1>bootcut</h1>
+                <div class="details">
+                    <h2>BOOT CUT JEANS</h2>
+                    <p>Classic flair</p>
+                </div>
+            </div>
+          
+    </section>
+
+    <script src="bgslider.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".slider-img").on("click", function () {
+                $(".slider-img").removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+    </script>
+</body>
+</html>
+
+
